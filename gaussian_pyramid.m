@@ -40,7 +40,7 @@ c = size(I,2);
 
 if ~exist('nlev')
     %compute the highest possible pyramid
-    nlev = floor(log(min(r,c)) / log(2));
+    nlev = floor(log(min(r,c)) / log(2));                                        %如果没有输入nlev
 end
 
 % start by copying the image to the finest level
