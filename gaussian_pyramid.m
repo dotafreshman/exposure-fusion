@@ -44,7 +44,7 @@ if ~exist('nlev')
 end
 
 % start by copying the image to the finest level
-pyr = cell(nlev,1);
+pyr = cell(nlev,1);                                                              % pyr是一个cell类型数组，nlev行，1列
 pyr{1} = I;
 
 % recursively downsample the image
