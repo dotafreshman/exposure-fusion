@@ -10,6 +10,13 @@
   C == 组合 ==> D[pry];
   D == reconstruct ==> E[图像];
   ```
+  ```mermaid
+graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+  ```
   
   
 Implementation of Exposure Fusion in Matlab, as described in:
