@@ -56,7 +56,7 @@ r = size(I,1);
 c = size(I,2);
 N = size(I,4);
 
-W = ones(r,c,N);
+W = ones(r,c,N);                                                                       % W：权重矩阵
 
 %compute the measures and combines them into a weight map
 contrast_parm = m(1);
@@ -64,7 +64,7 @@ sat_parm = m(2);
 wexp_parm = m(3);
 
 if (contrast_parm > 0)
-    W = W.*contrast(I).^contrast_parm;
+    W = W.*contrast(I).^contrast_parm;                                                 %  利用contrast, saturation, well exposure三个函数计算权重
 end
 if (sat_parm > 0)
     W = W.*saturation(I).^sat_parm;
@@ -99,7 +99,7 @@ R = reconstruct_laplacian_pyramid(pyr);
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%          下面是contrast, saturation, well-expose3个函数
 
 % contrast measure
 function C = contrast(I)
