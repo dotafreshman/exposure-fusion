@@ -1,6 +1,5 @@
 # exposure-fusion
-## example.m是文件的top
-   在里面，先load.m，后exposure.m()
+## example.m是文件的top——在里面，先load.m，后exposure.m()
 
 
 
