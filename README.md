@@ -4,11 +4,11 @@
   * pyramid——一个cell，每一格是W/I用downsample迭代滤过  
   * exposure流程  
   ```mermaid  
-  graph LR  
-    A[图像] --> 3成员 --> B[权重W]
-    B == pyramid ==> C[pryW]
-    C == 组合 ==> D[pry]
-    D == reconstruct ==> E[图像]
+  graph LR;  
+    A[图像] --> 3成员 --> B[权重W];
+    B == pyramid ==> C[pryW];
+    C == 组合 ==> D[pry];
+    D == reconstruct ==> E[图像];
   ```
   
   
