@@ -29,7 +29,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 % Arguments:
 %   'path', refers to a directory which contains a sequence of JPEG or PPM
 %   images
-%   'reduce' is an optional parameter that controls downsampling, e.g., reduce = .5
+%   'reduce' is an optional parameter that controls downsampling, e.g., reduce = .5                             reduce：一个参数，用来控制downsample
 %   downsamples all images by a factor of 2.
 %
 % tom.mertens@gmail.com, August 2007
@@ -49,7 +49,7 @@ end
 files = dir([path '/*.jpg']);
 N = length(files);
 if (N == 0)
-    files = dir([path '/*.ppm']);
+    files = dir([path '/*.ppm']);                         %判断图片是否ppm格式
     N = length(files);
     if (N == 0)
         error('no files found');
@@ -57,24 +57,24 @@ if (N == 0)
 end
 
 % allocate memory
-sz = size(imread([path '/' files(1).name]));
-r = floor(sz(1)*reduce);
-c = floor(sz(2)*reduce);
-I = zeros(r,c,3,N);
+sz = size(imread([path '/' files(1).name]));              %把所有图合成一个4维矩阵
+r = floor(sz(1)*reduce);                                                  %floor：向下取整
+c = floor(sz(2)*reduce);                                                  %r：一张图的高；c：一张图的宽
+I = zeros(r,c,3,N);                                                       %N：一个文件包含几张图
 
 % read all files
 for i = 1:N
     
     % load image
     filename = [path '/' files(i).name];
-    im = double(imread(filename)) / 255;
+    im = double(imread(filename)) / 255;                                 %double图片/255
     if (size(im,1) ~= sz(1) || size(im,2) ~= sz(2))
-        error('images must all have the same size');
+        error('images must all have the same size');       %判断图是否尺寸一致
     end
     
     % optional downsampling step
     if (reduce < 1)
-        im = imresize(im,[r c],'bicubic');
+        im = imresize(im,[r c],'bicubic');                 %resize           
     end
     
     I(:,:,:,i) = im;
