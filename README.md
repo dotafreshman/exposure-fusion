@@ -10,24 +10,9 @@
   C == 组合 ==> D[pry];
   D == reconstruct ==> E[图像];
   ```
-  ```mermaid
-graph TD;
-  A-->B;
-  A-->C;
-  B-->D;
-  C-->D;
-  ```
   
-  <script src="mermaid.full.min.js"></script>
-Then define your chart like this:
-
-<div class="mermaid">
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-</div>
+  
+ 
   
   
 Implementation of Exposure Fusion in Matlab, as described in:
