@@ -1,6 +1,6 @@
 # exposure-fusion
 ## example.m是文件的top——在里面，先load.m，后exposure.m()
-
+* exposure下，又有contrast, saturation, well-expose三成员，以及gaussian_pyramid, laplace_pyramid 2成员 
 
 
 
