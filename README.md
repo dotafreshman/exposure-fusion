@@ -1,8 +1,6 @@
 # exposure-fusion
 ## example.m是文件的top——在里面，先load.m，后exposure.m()
-* exposure下，又有`contrast`, `saturation`, `well-expose`三成员，以及`gaussian_pyramid`, `laplace_pyramid` 2成员 
-
-
+* exposure下，又有`contrast`, `saturation`, `well-expose`三成员，以及`gaussian_pyramid`, `laplace_pyramid` 2成员  
 
 Implementation of Exposure Fusion in Matlab, as described in:
 
